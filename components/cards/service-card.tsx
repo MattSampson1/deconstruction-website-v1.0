@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import Link from 'next/link'; // Import Link for future linking
+// import Link from 'next/link'; // Import Link for future linking
 
 // Define the props based on the structure in services.json
 interface ServiceCardProps {
@@ -19,7 +19,7 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({
-  id,
+  // id,
   title,
   summary,
   image,

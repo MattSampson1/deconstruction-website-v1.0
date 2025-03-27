@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image'; // Import Next.js Image
+// import Image from 'next/image'; // Import Next.js Image
 
 export default function HomePage() {
   return (
@@ -27,7 +27,7 @@ export default function HomePage() {
         {/* Content Container */}
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-            Building Tomorrow's Spaces, Today.
+            Building Tomorrow&apos;s Spaces, Today.
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Diamond Edge Construction leverages modern techniques and meticulous planning
