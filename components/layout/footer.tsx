@@ -1,5 +1,5 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-6 text-center text-sm text-gray-600 dark:text-gray-400">
         <p>
           © {currentYear} Diamond Edge Construction Inc. All Rights Reserved.
-        </p>{" "}
+        </p>{' '}
         {/* Replace with your business name */}
         <div className="mt-2 space-x-4">
           <Link href="/privacy-policy" className="hover:underline">

@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { cn } from '@/lib/utils';
+import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
 
 // Setup the Inter font with the variable approach for Tailwind
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 // Define metadata for the site (SEO)
 export const metadata: Metadata = {
   // Updated title reflecting the user's business name from a previous snippet (if applicable)
   // or keep the placeholder 'ConstructCo' if preferred. Let's use Diamond Edge based on the user's example title.
-  title: "Diamond Edge Construction Inc. - Modern Construction Contracting",
+  title: 'Diamond Edge Construction Inc. - Modern Construction Contracting',
   description:
-    "Tech-forward construction services for remodels, renovations, and new builds.", // Slightly refined description
+    'Tech-forward construction services for remodels, renovations, and new builds.', // Slightly refined description
   // Add more metadata later: openGraph, icons, etc.
 };
 
@@ -35,7 +35,7 @@ export default function RootLayout({
       */}
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          'bg-background min-h-screen font-sans antialiased',
           inter.variable // Apply the font variable class to the body
         )}
       >
