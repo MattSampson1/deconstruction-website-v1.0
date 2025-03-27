@@ -1,0 +1,45 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Frontend specific rules for the construction contracting website.
+globs:
+  - "/app/**/*.{ts,tsx}"
+  - "/components/**/*.{ts,tsx}"
+  - "/styles/**/*.css"
+---
+# Frontend Rules
+
+Apply these rules to all frontend code (React components, pages, styles).
+
+## Component Design
+- **Functional Components:** Use functional components with Hooks.
+- **Props:** Use clear and descriptive prop names. Use TypeScript interfaces or types for prop definitions.
+- **Reusability:** Build small, reusable components (e.g., `<Section>`, `<ServiceCard>`, `<PortfolioCard>`) and compose them.
+- **File Structure:** For complex components, consider co-locating related files (e.g., `components/portfolio-card/index.tsx`, `components/portfolio-card/styles.module.css` if needed, though prefer Tailwind).
+- **shadcn/ui:** Import directly from `@/components/ui/...`. Do not modify files within `components/ui` unless explicitly required for deep customization agreed upon. Prefer composition over modification.
+
+## Styling
+- **Tailwind First:** Prioritize Tailwind utility classes for all styling.
+- **Minimal Custom CSS:** Only use custom CSS (`globals.css` or CSS Modules) for things not easily achievable with Tailwind (e.g., complex animations, base global styles).
+- **Responsive Design:** Implement mobile-first responsive design using Tailwind's prefixes (`sm:`, `md:`, `lg:`, `xl:`). Test layouts across breakpoints.
+- **Theme Colors:** Utilize the defined theme colors (e.g., `bg-gray-900`, `text-blue-600`) consistently for backgrounds, text, buttons, and interactive elements to maintain the tech-forward vibe.
+- **Transitions/Animations:** Use subtle transitions (e.g., `transition-colors`, `hover:scale-105`) for interactive elements like buttons and cards. Avoid overly complex or distracting animations for Phase 1.
+
+## State Management
+- **Local State:** Use `useState` for component-level state.
+- **Avoid Global State (Phase 1):** No need for complex state management libraries (Context, Zustand, Redux) in Phase 1. Pass props down or lift state up where necessary.
+
+## Accessibility (A11y)
+- **Semantic HTML:** Use appropriate HTML5 tags (`<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`, `<header>`).
+- **Image Alt Text:** Provide descriptive `alt` text for all images, especially those conveying information. For decorative images, use `alt=""`. Use Next.js `<Image>` which requires `alt`.
+- **Form Labels:** Ensure all form inputs have associated `<label>` elements. shadcn/ui forms help with this.
+- **Keyboard Navigation:** Ensure all interactive elements (buttons, links, form fields) are focusable and usable via keyboard.
+- **Color Contrast:** Ensure sufficient color contrast between text and background, adhering to WCAG guidelines.
+
+## Performance
+- **Next.js `<Image>`:** Use `next/image` for all images to benefit from automatic optimization (resizing, format conversion, lazy loading by default). Provide `width` and `height` props.
+- **Lazy Loading:** While `next/image` handles images, consider dynamic imports (`next/dynamic`) for large components that are below the fold or not immediately needed, if bundle sizes become an issue later.
+- **Static Rendering:** Favor Static Site Generation (SSG) where possible (default for pages without dynamic data fetching needs in `getServerSideProps` or dynamic route segments in Pages Router, App Router defaults to static unless dynamic functions/segments used). Fetch data at build time from JSON files.

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "modern-kitchen-remodel-01",
+    "title": "Downtown Apartment Kitchen Update",
+    "description": "Complete overhaul of a compact apartment kitchen, focusing on maximizing space and light. Included custom cabinetry, quartz countertops, and integrated appliances.",
+    "date": "2024-06-15",
+    "images": [
+      "/images/portfolio/kitchen-01/main.jpg",
+      "/images/portfolio/kitchen-01/detail.jpg",
+      "/images/portfolio/kitchen-01/before.jpg"
+    ],
+    "altTexts": [
+      "Modern compact kitchen with white cabinets and wood accents",
+      "Detail of quartz countertop and undermount sink",
+      "Original dated kitchen before remodeling"
+    ],
+    "category": "Kitchen Remodel",
+    "tags": ["modern", "compact", "quartz", "custom cabinetry"]
+  },
+  {
+    "id": "master-bath-spa-retreat-01",
+    "title": "Master Bath Spa Retreat",
+    "description": "Transformation of a dated master bathroom into a luxurious spa-like retreat featuring a freestanding tub, walk-in shower with rain head, and double vanity.",
+    "date": "2024-05-20",
+    "images": [
+      "/images/portfolio/bathroom-01/main.jpg",
+      "/images/portfolio/bathroom-01/shower.jpg"
+    ],
+    "altTexts": [
+      "Spacious master bathroom with freestanding tub and double vanity",
+      "Walk-in shower with custom tilework and rain shower head"
+    ],
+    "category": "Bathroom Remodel",
+    "tags": ["luxury", "spa", "freestanding tub", "walk-in shower", "tile"]
+  }
+]

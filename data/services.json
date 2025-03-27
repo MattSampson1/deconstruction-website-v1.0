@@ -1,0 +1,29 @@
+[
+  {
+    "id": "kitchen-remodels",
+    "title": "Kitchen Remodels",
+    "summary": "Transform your kitchen into a modern, functional, and beautiful space.",
+    "description": "Our kitchen remodeling service covers everything from initial design consultation and material selection to demolition, installation of cabinets, countertops, appliances, flooring, lighting, and final touches. We focus on quality craftsmanship and efficient project management.",
+    "icon": "ChefHat",
+    "image": "/images/services/kitchen-placeholder.jpg",
+    "altText": "Stylishly remodeled modern kitchen"
+  },
+  {
+    "id": "bathroom-remodels",
+    "title": "Bathroom Remodels",
+    "summary": "Create a spa-like retreat or update functionality in your bathroom.",
+    "description": "We specialize in full bathroom renovations, including shower and tub installation, custom tile work, vanity replacement, modern fixture upgrades, and improved lighting and ventilation. Let us build your dream bathroom.",
+    "icon": "Bath",
+    "image": "/images/services/bathroom-placeholder.jpg",
+    "altText": "Modern bathroom with walk-in shower"
+  },
+  {
+    "id": "custom-additions",
+    "title": "Custom Home Additions",
+    "summary": "Expand your living space with seamlessly integrated home additions.",
+    "description": "Need more room? We design and build home additions that match your existing architecture while providing the extra space you need, whether it's a new bedroom, home office, or expanded living area. (Coming Soon - Focus for Future Growth)",
+    "icon": "Home",
+    "image": "/images/services/addition-placeholder.jpg",
+    "altText": "Exterior of a house with a new addition"
+  }
+]
