@@ -10,11 +10,12 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 // Define metadata for the site (SEO)
 export const metadata: Metadata = {
-  // Updated title reflecting the user's business name from a previous snippet (if applicable)
-  // or keep the placeholder 'ConstructCo' if preferred. Let's use Diamond Edge based on the user's example title.
   title: 'Diamond Edge Construction Inc. - Modern Construction Contracting',
   description:
-    'Tech-forward construction services for remodels, renovations, and new builds.', // Slightly refined description
+    'Tech-forward construction services for remodels, renovations, and new builds.',
+  icons: {
+    icon: '/favicon.ico',
+  },
   // Add more metadata later: openGraph, icons, etc.
 };
 
