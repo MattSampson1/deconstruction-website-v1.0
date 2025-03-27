@@ -1,0 +1,54 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: General rules applying to all aspects of the construction contracting website.
+globs:
+  - "**/*.{ts,tsx}"
+  - "app/globals.css"
+  - "**/*.json"
+---
+# General Rules
+
+Apply these rules across the entire project.
+
+## Project Structure (Adjusted for App Router)
+- `components/` - Shared React components
+  - `layout/` - Header, Footer, etc.
+  - `ui/` - shadcn/ui components (managed by CLI, generally don't edit)
+  - `sections/` - Larger page sections (e.g., Hero, ServicesList)
+  - `shared/` - Smaller reusable elements (e.g., Logo, maybe specific buttons if customized)
+- `app/` - Next.js App Router pages and API routes
+  - `(pages)/` - Route groups for main pages (e.g., `app/(pages)/services/page.tsx`)
+    - `page.tsx` - Main homepage component (`app/page.tsx`)
+    - `services/page.tsx`
+    - `portfolio/page.tsx`
+    - `contact/page.tsx`
+    - `layout.tsx` - Root layout (`app/layout.tsx`)
+  - `api/` - API route handlers (e.g., `app/api/contact/route.ts`)
+- `public/` - Static assets (images, fonts, favicon.ico, robots.txt, sitemap.xml)
+- `data/` - Static JSON data (e.g., `projects.json`, `services.json`)
+- `styles/` - Should primarily contain `globals.css` inside `app/` now. Keep this minimal.
+- `lib/` - Utility functions (e.g., `utils.ts` from shadcn, email sending logic, data fetching helpers)
+
+## Rules
+- **Imports:** Use `@/` for absolute imports from the project root (e.g., `@/components/ui/button`, `@/lib/utils`). Configure this in `tsconfig.json` (`baseUrl` and `paths`).
+- **Naming:**
+    - Files and folders: `kebab-case` (e.g., `portfolio-card.tsx`, `contact-form.tsx`). Exception: Next.js specific files (`page.tsx`, `layout.tsx`, `route.ts`).
+    - Components: `PascalCase` (e.g., `PortfolioCard`, `ContactForm`).
+    - Variables/Functions: `camelCase` (e.g., `handleSubmit`, `projectData`).
+- **shadcn/ui:** Do not modify components inside `components/ui` unless explicitly instructed and necessary. Prefer composing them or using `class-variance-authority` for variants if needed.
+- **DRY Principle:** Keep code Don't Repeat Yourself. Create reusable components and utility functions.
+- **TypeScript:** Use TypeScript for type safety. Define interfaces or types for props, API responses, and complex objects.
+
+## Environment Variables
+- Store all sensitive keys and environment-specific settings in `.env.local`.
+- Mirror the structure in `.env.example` with empty values or placeholders (safe to commit).
+- Prefix variables needed on the client-side with `NEXT_PUBLIC_`.
+- Access server-side variables using `process.env.VARIABLE_NAME`.
+- **Never commit `.env.local`**. Ensure it's listed in `.gitignore`.
+
+**Example:**
+### `.env.local`

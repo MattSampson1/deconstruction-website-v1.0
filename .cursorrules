@@ -1,0 +1,66 @@
+# Project Instructions
+
+Use these specifications and guidelines to build the website.
+
+Write complete, functional code for every step. Do not skip details or assume partial implementations.
+
+Your goal is to fully complete whatever I ask for, tailored to my construction contracting website.
+
+## Overview
+
+This is a static website for a tech-forward construction contracting business. It starts as a sales funnel and portfolio showcase, with plans to scale into AI-driven automation (Phase 2) and robotics integration (Phase 3).
+
+## Tech Stack (Phase 1)
+
+- Frontend: Next.js, Tailwind CSS, shadcn/ui
+- Hosting: Vercel
+- Version Control: GitHub
+- Utilities: Nodemailer (for form emails), Prettier (code formatting), Next.js Image (optimization)
+
+Future Phases:
+
+- Phase 2: Add Supabase (database, storage, auth)
+- Phase 3: Add AWS (AI compute, robotics)
+
+## Guidelines
+
+- **Tech-Forward Vibe**: Use subtle animations (e.g., `hover:scale-105 transition`) and a modern palette (e.g., gray-900, blue-600) to reflect innovation.
+- **Scalability**: Write modular, reusable code (e.g., `<PortfolioCard>`) to ease future expansion.
+- **Beginner-Friendly**: Keep logic simple and avoid over-engineering for Phase 1.
+- **SaaS-Inspired**: Design a clean, minimal UI with clear CTAs, inspired by SaaS marketplaces like Stripe.
+
+## Responsive Design
+
+- Use Tailwind's responsive prefixes (sm:, md:, lg:, xl:) for mobile-first design
+- Test all pages on mobile, tablet, and desktop viewports
+- Ensure forms are usable on mobile devices
+- Implement collapsible navigation for mobile users
+
+## SEO Rules
+
+- Include descriptive meta titles and descriptions for all pages
+- Use semantic HTML (e.g., `<section>`, `<article>`, `<nav>`)
+- Implement structured data for local business
+- Create a sitemap.xml and robots.txt
+- Use appropriate heading hierarchy (h1, h2, h3)
+
+## Performance Optimization
+
+- Optimize all images (use Next.js Image component)
+- Minimize JavaScript bundle size
+- Implement lazy loading for below-the-fold content
+- Use static generation for all pages in Phase 1
+- Prefetch critical resources and links
+
+## Routing
+
+- Use the App Router for Phase 1 simplicity
+- Structure URLs logically (e.g., /services, /portfolio/[id])
+- Implement proper navigation between pages
+
+## Content Management
+
+- Store portfolio projects in /data/projects.json
+- Store services in /data/services.json
+- Structure content for easy migration to CMS in future phases
+- Include image paths, descriptions, and metadata
