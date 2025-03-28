@@ -24,11 +24,13 @@
     "date": "2024-05-20",
     "images": [
       "/images/portfolio/bathroom-01/main.jpg",
-      "/images/portfolio/bathroom-01/shower.jpg"
+      "/images/portfolio/bathroom-01/shower.jpg",
+      "/images/portfolio/bathroom-01/before.jpg"
     ],
     "altTexts": [
       "Spacious master bathroom with freestanding tub and double vanity",
-      "Walk-in shower with custom tilework and rain shower head"
+      "Walk-in shower with custom tilework and rain shower head",
+      "Original dated bathroom before remodeling"
     ],
     "category": "Bathroom Remodel",
     "tags": ["luxury", "spa", "freestanding tub", "walk-in shower", "tile"]

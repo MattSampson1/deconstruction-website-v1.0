@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 // Define metadata for the site (SEO)
 export const metadata: Metadata = {
-  title: 'Diamond Edge Construction Inc. - Modern Construction Contracting',
+  title: 'Diamond Edge Construction Inc.',
   description:
     'Tech-forward construction services for remodels, renovations, and new builds.',
   icons: {
