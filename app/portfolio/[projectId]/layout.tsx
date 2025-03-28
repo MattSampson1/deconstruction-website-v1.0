@@ -1,16 +1,15 @@
 import { getProjectById } from '@/lib/data';
 import type { Metadata } from 'next';
+import React from 'react';
 
-// Define props type matching the dynamic segment
-type Props = {
-  params: { projectId: string };
+type MetadataProps = {
+  params: Promise<{ projectId: string }>;
 };
 
-// --- Dynamic Metadata Generation (Moved Here) ---
 export async function generateMetadata(
-  { params }: Props,
+  { params }: MetadataProps
 ): Promise<Metadata> {
-  const projectId = params.projectId;
+  const { projectId } = await params;
   const project = getProjectById(projectId);
 
   if (!project) {
@@ -19,16 +18,9 @@ export async function generateMetadata(
     };
   }
 
-  // Construct absolute image URL for Open Graph
-  // Ensure NEXT_PUBLIC_SITE_URL is set in your .env.local and .env.example
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'; // Fallback needed
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const ogImageUrl = project.images?.[0] ? `${siteUrl}${project.images[0]}` : undefined;
-
-  const ogImages = ogImageUrl ? [{
-      url: ogImageUrl,
-      width: 1200, // Common OG width
-      height: 630, // Common OG height
-    }] : [];
+  const ogImages = ogImageUrl ? [{ url: ogImageUrl, width: 1200, height: 630 }] : [];
 
   return {
     title: `${project.title} - Portfolio | Diamond Edge Construction Inc.`,
@@ -40,18 +32,16 @@ export async function generateMetadata(
       type: 'article',
       publishedTime: project.date,
       tags: project.tags,
-      url: `${siteUrl}/portfolio/${projectId}`, // Add canonical URL
+      url: `${siteUrl}/portfolio/${projectId}`,
     },
   };
 }
 
-// --- Layout Component ---
-// This simple layout just passes children through.
-// It exists primarily to host the generateMetadata function.
-export default function ProjectDetailLayout({
+
+export default async function ProjectDetailLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>; // Render the page component passed as children
+  return <>{children}</>;
 }
