@@ -22,7 +22,7 @@ export default function ProjectDetailPage() {
   const params = useParams<{ projectId: string }>(); // Specify the expected shape
   const projectId = params.projectId; // Extract projectId
 
-  const [project, setProject] = useState(() => getProjectById(projectId)); // Initialize state with fetched project
+  const project = getProjectById(projectId);
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 

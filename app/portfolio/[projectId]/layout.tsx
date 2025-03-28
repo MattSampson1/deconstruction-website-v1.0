@@ -9,7 +9,6 @@ type Props = {
 // --- Dynamic Metadata Generation (Moved Here) ---
 export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const projectId = params.projectId;
   const project = getProjectById(projectId);
