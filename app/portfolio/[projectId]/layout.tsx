@@ -1,5 +1,5 @@
 import { getProjectById } from '@/lib/data';
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata } from 'next';
 
 // Define props type matching the dynamic segment
 type Props = {
