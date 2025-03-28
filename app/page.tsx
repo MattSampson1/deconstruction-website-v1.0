@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image'; // Uncomment this import
 // import Image from 'next/image'; // Import Next.js Image
 
 export default function HomePage() {
@@ -7,21 +8,17 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-20 md:py-32">
-        {/* Optional: Background Image */}
-        {/* Add a container for the background image to control opacity */}
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          {/* Replace with a relevant, high-quality background image */}
-          {/* Ensure you have the image in public/images/hero-background.jpg */}
-          {/* <Image
+          <Image
             src="/images/hero-background.jpg"
             alt="Modern home construction project"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-30" // Adjust opacity as needed
-            priority // Prioritize loading for LCP
-          /> */}
-          {/* Fallback background color if no image or while loading */}
-          <div className="absolute inset-0 bg-gray-900 opacity-100"></div>
+            fill
+            quality={85}
+            sizes="100vw"
+            priority
+            className="object-cover opacity-30"
+          />
         </div>
 
         {/* Content Container */}
